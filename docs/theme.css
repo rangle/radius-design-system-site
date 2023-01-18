@@ -1,0 +1,443 @@
+
+@layer radius--core,radius--lightmode--semanticcolors,radius--lightmode--components--buttons,radius--lightmode--components--link,radius--darkmode--semanticcolors,radius--darkmode--components--buttons,radius--darkmode--components--link,radius--typography--lg-breakpoint,radius--typography--md-breakpoint,radius--typography--sm-breakpoint;
+
+
+
+@layer radius--core {
+  
+    :root {
+      
+        --color-core-primary-50: #FDE7E2;
+        --color-core-primary-100: #FFCBC0;
+        --color-core-primary-200: #F7856E;
+        --color-core-primary-300: #F67055;
+        --color-core-primary-400: #F65836;
+        --color-core-primary-500: #D44527;
+        --color-core-primary-600: #A3331A;
+        --color-core-primary-700: #772513;
+        --color-core-primary-800: #581C0E;
+        --color-core-primary-900: #351008;
+        --color-core-neutral-100: #FAFAFA;
+        --color-core-neutral-200: #F1F3F4;
+        --color-core-neutral-300: #EDEDED;
+        --color-core-neutral-400: #D9D9D9;
+        --color-core-neutral-500: #CCCCCC;
+        --color-core-neutral-600: #A6A6A6;
+        --color-core-neutral-700: #656565;
+        --color-core-neutral-800: #4D4D4D;
+        --color-core-neutral-900: #262626;
+        --color-core-neutral-white: #FFFFFF;
+        --color-core-error-100: #FDE7E2;
+        --color-core-error-400: #F7856E;
+        --color-core-error-600: #A3331A;
+        --color-core-success-100: #E0F5E3;
+        --color-core-success-400: #A6E3AE;
+        --color-core-success-600: #208c2e;
+        --color-core-warning-50: #FFF5E5;
+        --color-core-warning-400: #FF9900;
+        --color-core-warning-600: #CC7A00;
+        --color-core-info-50: #E5EDFF;
+        --color-core-info-500: #578AFF;
+        --color-core-info-800: #00257B;
+        --spacing-core-space-none: 0px;
+        --spacing-core-space-half: Calc(0.25rem*0.5);
+        --spacing-core-space-base: 0.25rem;
+        --spacing-core-space-2x: Calc(0.25rem * 2);
+        --spacing-core-space-3x: Calc(0.25rem * 3);
+        --spacing-core-space-4x: Calc(0.25rem*4);
+        --spacing-core-space-5x: Calc(0.25rem * 5);
+        --spacing-core-space-6x: Calc(0.25rem*6);
+        --spacing-core-space-8x: Calc(0.25rem*8);
+        --spacing-core-space-10x: Calc(0.25rem*10);
+        --spacing-core-space-12x: Calc(0.25rem*12);
+        --spacing-core-space-16x: Calc(0.25rem*16);
+        --spacing-core-space-18x: Calc(0.25rem*18);
+        --spacing-core-space-20x: Calc(0.25rem*20);
+        --spacing-core-space-26x: Calc(0.25rem*26);
+        --spacing-core-space-45x: Calc(0.25rem*45);
+        --spacing-core-space-60x: Calc(0.25rem*60);
+        --borderRadius-core-radius-none: 0rem;
+        --borderRadius-core-radius-xxs: 0.125rem;
+        --borderRadius-core-radius-xsm: 0.25rem;
+        --borderRadius-core-radius-sm: 0.5;
+        --borderRadius-core-radius-md: 1rem;
+        --borderRadius-core-radius-lg: 1.5rem;
+        --borderRadius-core-radius-xlg: 2rem;
+        --borderRadius-core-radius-xxlg: 2.25rem;
+        --borderRadius-core-radius-max: 300px;
+        --boxShadow-core-elevation-0: 0 0 0 0 #000000;
+        --boxShadow-core-elevation-50: 0 1 3 0 rgba(38,38,38,0.1),0 0 1 0 rgba(38,38,38,0.1);
+        --boxShadow-core-elevation-100: 0 2 4 0 rgba(38,38,38,0.1),0 0 1 0 rgba(38,38,38,0.1);
+        --boxShadow-core-elevation-200: 0 4 8 0 rgba(38,38,38,0.1),0 0 1 0 rgba(38,38,38,0.1);
+        --boxShadow-core-elevation-300: 0 8 16 0 rgba(38,38,38,0.1),0 0 1 0 rgba(38,38,38,0.1);
+        --boxShadow-core-elevation-400: 0 16 24 0 rgba(38,38,38,0.1),0 0 1 0 rgba(38,38,38,0.1);
+        --opacity-core-opacity-lighter: 25%;
+        --opacity-core-opacity-light: 35%;
+        --opacity-core-opacity-dark: 65%;
+        --opacity-core-opacity-darker: 90%;
+        --borderWidth-core-border-width-sm: 1px;
+        --borderWidth-core-border-width-md: 2px;
+        --fontFamilies-font-families-default: Riforma LL;
+        --fontFamilies-font-families-secondary: Arial;
+        --fontFamilies-font-families-tertiary: Helvetica;
+        --lineHeights-line-heights-tight: 100%;
+        --lineHeights-line-heights-regular: 150%;
+        --lineHeights-line-heights-loose: 180%;
+        --fontWeights-font-weight-bold: Bold;
+        --fontWeights-font-weight-med: Medium;
+        --fontWeights-font-weight-reg: Regular;
+        --fontWeights-font-weight-lt: Light;
+        --fontSizes-font-size-100: 0.75rem;
+        --fontSizes-font-size-200: 0.875rem;
+        --fontSizes-font-size-300: 1rem;
+        --fontSizes-font-size-400: 1.125rem;
+        --fontSizes-font-size-500: 1.25rem;
+        --fontSizes-font-size-600: 1.5rem;
+        --fontSizes-font-size-700: 2.25rem;
+        --fontSizes-font-size-800: 2.5rem;
+        --fontSizes-font-size-900: 4rem;
+        --fontSizes-font-size-1000: 5rem;
+        --letterSpacing-letter-spacing-xtr-tight: -1%;
+        --letterSpacing-letter-spacing-regular: 0%;
+        --letterSpacing-letter-spacing-loose: 1%;
+        --letterSpacing-letter-spacing-xtr-loose: 3%;
+        --paragraphSpacing-paragraph-spacing-0: 0;
+        --textCase-text-case-none: none;
+        --textDecoration-text-decoration-none: none;
+        --textDecoration-text-decoration-underline: underline;
+    }
+}
+
+@layer radius--lightmode--semanticcolors {
+  
+    :root {
+      
+        --color-text-on-base-primary: #262626;
+        --color-text-on-base-secondary: #656565;
+        --color-text-on-base-accent: #D44527;
+        --color-text-on-base-disabled: #CCCCCC;
+        --color-text-inverse-primary: #FFFFFF;
+        --color-text-inverse-secondary: #F1F3F4;
+        --color-text-inverse-accent: #F65836;
+        --color-text-on-subtle-primary: #262626;
+        --color-text-on-subtle-secondary: #656565;
+        --color-text-on-subtle-accent: #D44527;
+        --color-text-on-subtle-disabled: #CCCCCC;
+        --color-text-on-accent-primary: #262626;
+        --color-text-on-accent-secondary: #656565;
+        --color-text-on-accent-disabled: #CCCCCC;
+        --color-text-primary-action-default: #FFFFFF;
+        --color-text-primary-action-hover: #FFFFFF;
+        --color-text-primary-action-active: #FFFFFF;
+        --color-text-primary-action-focus: #FFFFFF;
+        --color-text-primary-action-disabled: #FFFFFF;
+        --color-text-secondary-action-default: #262626;
+        --color-text-secondary-action-hover: #FFFFFF;
+        --color-text-secondary-action-active: #FFFFFF;
+        --color-text-secondary-action-focus: #FFFFFF;
+        --color-text-secondary-action-disabled: #CCCCCC;
+        --color-text-tertiary-action-default: #262626;
+        --color-text-tertiary-action-hover: #D44527;
+        --color-text-tertiary-action-active: #A3331A;
+        --color-text-tertiary-action-focus: #D44527;
+        --color-text-tertiary-action-disabled: #CCCCCC;
+        --color-background-base: #FFFFFF;
+        --color-background-subtle: #FAFAFA;
+        --color-background-accent: #FFCBC0;
+        --color-background-inverse: #262626;
+        --color-interaction-primary-default: #262626;
+        --color-interaction-primary-hover: #D44527;
+        --color-interaction-primary-active: #A3331A;
+        --color-interaction-primary-focus: #D44527;
+        --color-interaction-primary-disabled: #CCCCCC;
+        --color-interaction-secondary-default: #262626;
+        --color-interaction-secondary-hover: #D44527;
+        --color-interaction-secondary-active: #A3331A;
+        --color-interaction-secondary-focus: #D44527;
+        --color-interaction-secondary-disabled: #CCCCCC;
+        --color-interaction-tertiary-default: #262626;
+        --color-interaction-tertiary-hover: #D44527;
+        --color-interaction-tertiary-active: #A3331A;
+        --color-interaction-tertiary-focus: #D44527;
+        --color-interaction-tertiary-disabled: #CCCCCC;
+    }
+}
+
+@layer radius--lightmode--components--buttons {
+  
+    :root {
+      
+        --color-button-primary-surface-default: #FFFFFF;
+        --color-button-primary-surface-hover: #D44527;
+        --color-button-primary-surface-active: #A3331A;
+        --color-button-primary-surface-focus: #D44527;
+        --color-button-primary-surface-disabled: #CCCCCC;
+        --color-button-primary-border-default: #FFFFFF;
+        --color-button-primary-border-hover: #D44527;
+        --color-button-primary-border-active: #A3331A;
+        --color-button-primary-border-focus: #D44527;
+        --color-button-primary-border-disabled: #CCCCCC;
+        --color-button-primary-label-default: #262626;
+        --color-button-primary-label-hover: #FFFFFF;
+        --color-button-primary-label-active: #FFFFFF;
+        --color-button-primary-label-focus: #FFFFFF;
+        --color-button-primary-label-disabled: #FFFFFF;
+        --spacing-button-horizontal-padding-lg: Calc(0.25rem*8);
+        --spacing-button-horizontal-padding-md: Calc(0.25rem*6);
+        --spacing-button-horizontal-padding-sm: Calc(0.25rem*4);
+        --spacing-button-vertical-padding-lg: Calc(0.25rem*4);
+        --spacing-button-vertical-padding-md: Calc(0.25rem * 3);
+        --spacing-button-vertical-padding-sm: Calc(0.25rem * 2);
+        --spacing-button-gap-default: Calc(0.25rem * 2);
+        --borderRadius-button-border-radius-none: 0rem;
+        --borderWidth-button-border-width-sm: 1px;
+        --borderWidth-button-border-width-md: 2px;
+        --color-button-secondary-surface-default: transparent;
+        --color-button-secondary-surface-hover: #D44527;
+        --color-button-secondary-surface-active: #A3331A;
+        --color-button-secondary-surface-focus: #D44527;
+        --color-button-secondary-surface-disabled: #CCCCCC;
+        --color-button-secondary-border-default: #FFFFFF;
+        --color-button-secondary-border-hover: #D44527;
+        --color-button-secondary-border-active: #A3331A;
+        --color-button-secondary-border-focus: #D44527;
+        --color-button-secondary-border-disabled: #CCCCCC;
+        --color-button-secondary-label-default: #FFFFFF;
+        --color-button-secondary-label-hover: #FFFFFF;
+        --color-button-secondary-label-active: #FFFFFF;
+        --color-button-secondary-label-focus: #FFFFFF;
+        --color-button-secondary-label-disabled: #CCCCCC;
+        --color-focus-outline-default: #D44527;
+        --borderRadius-focus-outline-border-radius-sm: 0.125rem;
+        --borderWidth-focus-outline-border-width-md: 2px;
+    }
+}
+
+@layer radius--lightmode--components--link {
+  
+    :root {
+      
+        --color-link-border-default: #FFFFFF;
+        --color-link-border-hover: #D44527;
+        --color-link-border-active: #F7856E;
+        --color-link-border-focus: #D44527;
+        --color-link-border-disabled: #CCCCCC;
+        --spacing-link-gap-default: Calc(0.25rem * 2);
+        --borderWidth-link-border-width-sm: 1px;
+        --borderWidth-link-border-width-md: 2px;
+        --spacing-link-horizontal-padding-none: 0px;
+        --spacing-link-vertical-padding-none: 0px;
+        --borderRadius-link-border-radius-none: 0rem;
+        --color-link-label-default: #FFFFFF;
+        --color-link-label-hover: #D44527;
+        --color-link-label-active: #F7856E;
+        --color-link-label-focus: #D44527;
+        --color-link-label-disabled: #CCCCCC;
+    }
+}
+
+@layer radius--darkmode--semanticcolors {
+  
+    :root {
+      
+        --color-text-on-base-primary: #FFFFFF;
+        --color-text-on-base-secondary: #F1F3F4;
+        --color-text-on-base-accent: #FFCBC0;
+        --color-text-on-base-disabled: #CCCCCC;
+        --color-text-inverse-primary: #262626;
+        --color-text-inverse-secondary: #4D4D4D;
+        --color-text-inverse-accent: #D44527;
+        --color-text--on-subtle-primary: #FFFFFF;
+        --color-text--on-subtle-secondary: #F1F3F4;
+        --color-text--on-subtle-accent: #D44527;
+        --color-text--on-subtle-disabled: #CCCCCC;
+        --color-text-on-accent-primary: #262626;
+        --color-text-on-accent-secondary: #656565;
+        --color-text-on-accent-disabled: #CCCCCC;
+        --color-text-primary-action-default: #262626;
+        --color-text-primary-action-hover: #FFFFFF;
+        --color-text-primary-action-active: #FFFFFF;
+        --color-text-primary-action-focus: #FFFFFF;
+        --color-text-primary-action-disabled: #FFFFFF;
+        --color-text-secondary-action-default: #FFFFFF;
+        --color-text-secondary-action-hover: #FFFFFF;
+        --color-text-secondary-action-active: #FFFFFF;
+        --color-text-secondary-action-focus: #FFFFFF;
+        --color-text-secondary-action-disabled: #CCCCCC;
+        --color-text-tertiary-action-default: #FFFFFF;
+        --color-text-tertiary-action-hover: #D44527;
+        --color-text-tertiary-action-active: #F7856E;
+        --color-text-tertiary-action-focus: #D44527;
+        --color-text-tertiary-action-disabled: #CCCCCC;
+        --color-background-base: #262626;
+        --color-background-subtle: #4D4D4D;
+        --color-background-accent: #FFCBC0;
+        --color-background-inverse: #FFFFFF;
+        --color-interaction-primary-default: #FFFFFF;
+        --color-interaction-primary-hover: #D44527;
+        --color-interaction-primary-active: #A3331A;
+        --color-interaction-primary-focus: #D44527;
+        --color-interaction-primary-disabled: #CCCCCC;
+        --color-interaction-secondary-default: #FFFFFF;
+        --color-interaction-secondary-hover: #D44527;
+        --color-interaction-secondary-active: #A3331A;
+        --color-interaction-secondary-focus: #D44527;
+        --color-interaction-secondary-disabled: #CCCCCC;
+        --color-interaction-tertiary-default: #FFFFFF;
+        --color-interaction-tertiary-hover: #D44527;
+        --color-interaction-tertiary-active: #F7856E;
+        --color-interaction-tertiary-focus: #D44527;
+        --color-interaction-tertiary-disabled: #CCCCCC;
+    }
+}
+
+@layer radius--darkmode--components--buttons {
+  
+    :root {
+      
+        --color-button-primary-surface-default: #FFFFFF;
+        --color-button-primary-surface-hover: #D44527;
+        --color-button-primary-surface-active: #A3331A;
+        --color-button-primary-surface-focus: #D44527;
+        --color-button-primary-surface-disabled: #CCCCCC;
+        --color-button-primary-border-default: #FFFFFF;
+        --color-button-primary-border-hover: #D44527;
+        --color-button-primary-border-active: #A3331A;
+        --color-button-primary-border-focus: #D44527;
+        --color-button-primary-border-disabled: #CCCCCC;
+        --color-button-primary-label-default: #262626;
+        --color-button-primary-label-hover: #FFFFFF;
+        --color-button-primary-label-active: #FFFFFF;
+        --color-button-primary-label-focus: #FFFFFF;
+        --color-button-primary-label-disabled: #FFFFFF;
+        --spacing-button-horizontal-padding-lg: Calc(0.25rem*8);
+        --spacing-button-horizontal-padding-md: Calc(0.25rem*6);
+        --spacing-button-horizontal-padding-sm: Calc(0.25rem*4);
+        --spacing-button-vertical-padding-lg: Calc(0.25rem*4);
+        --spacing-button-vertical-padding-md: Calc(0.25rem * 3);
+        --spacing-button-vertical-padding-sm: Calc(0.25rem * 2);
+        --spacing-button-gap-default: Calc(0.25rem * 2);
+        --borderRadius-button-border-radius-none: 0rem;
+        --borderWidth-button-border-width-sm: 1px;
+        --borderWidth-button-border-width-md: 2px;
+        --color-button-secondary-surface-default: transparent;
+        --color-button-secondary-surface-hover: #D44527;
+        --color-button-secondary-surface-active: #A3331A;
+        --color-button-secondary-surface-focus: #D44527;
+        --color-button-secondary-surface-disabled: #CCCCCC;
+        --color-button-secondary-border-default: #FFFFFF;
+        --color-button-secondary-border-hover: #D44527;
+        --color-button-secondary-border-active: #A3331A;
+        --color-button-secondary-border-focus: #D44527;
+        --color-button-secondary-border-disabled: #CCCCCC;
+        --color-button-secondary-label-default: #FFFFFF;
+        --color-button-secondary-label-hover: #FFFFFF;
+        --color-button-secondary-label-active: #FFFFFF;
+        --color-button-secondary-label-focus: #FFFFFF;
+        --color-button-secondary-label-disabled: #CCCCCC;
+        --color-focus-outline-default: #D44527;
+        --borderRadius-focus-outline-border-radius-sm: 0.125rem;
+        --borderWidth-focus-outline-border-width-md: 2px;
+    }
+}
+
+@layer radius--darkmode--components--link {
+  
+    :root {
+      
+        --color-link-border-default: transparent;
+        --color-link-border-hover: #D44527;
+        --color-link-border-active: #F7856E;
+        --color-link-border-focus: #D44527;
+        --color-link-border-disabled: #CCCCCC;
+        --spacing-link-gap-default: Calc(0.25rem * 2);
+        --borderWidth-link-border-width-sm: 1px;
+        --borderWidth-link-border-width-md: 2px;
+        --spacing-link-horizontal-padding-none: 0px;
+        --spacing-link-vertical-padding-none: 0px;
+        --borderRadius-link-border-radius-none: 0rem;
+        --color-link-label-default: #FFFFFF;
+        --color-link-label-hover: #D44527;
+        --color-link-label-active: #F7856E;
+        --color-link-label-focus: #D44527;
+        --color-link-label-disabled: #CCCCCC;
+    }
+}
+
+@layer radius--typography--lg-breakpoint {
+  
+  /* this layer automatically activates when the screen is bigger than a specific size */
+  @media screen and (min-width: 900px) {
+    
+    :root {
+      
+        --typography-heading-xxl: Bold 5rem/100% Riforma LL;
+        --typography-heading-xl: Bold 2.5rem/100% Riforma LL;
+        --typography-heading-lg: Bold 2.25rem/150% Riforma LL;
+        --typography-heading-md: Regular 1.5rem/150% Riforma LL;
+        --typography-heading-sm: Medium 1.25rem/150% Riforma LL;
+        --typography-heading-xs: Light 0.875rem/150% Riforma LL;
+        --typography-body-xl: Regular 1.5rem/150% Riforma LL;
+        --typography-body-md: Regular 1.125rem/150% Riforma LL;
+        --typography-body-sm: Bold 1rem/150% Riforma LL;
+        --typography-link-sm: Medium 0.875rem/150% Riforma LL;
+        --typography-btn-lg: Medium 1.5rem/150% Riforma LL;
+        --typography-btn-md: Medium 1.125rem/150% Riforma LL;
+        --typography-btn-sm: Medium 1rem/150% Riforma LL;
+        --dimension-min-width: 900px;
+    }
+  }
+    
+}
+
+@layer radius--typography--md-breakpoint {
+  
+  /* this layer automatically activates when the screen is between two specific sizes */
+  @media screen and (min-width: 600px) and (max-width: 899px) {
+    
+    :root {
+      
+        --typography-heading-xxl: Bold 4rem/100% Riforma LL;
+        --typography-heading-xl: Bold 2.5rem/100% Riforma LL;
+        --typography-heading-lg: Bold 2.25rem/150% Riforma LL;
+        --typography-heading-md: Regular 1.25rem/150% Riforma LL;
+        --typography-heading-sm: Medium 1.125rem/150% Riforma LL;
+        --typography-heading-xs: Light 0.875rem/150% Riforma LL;
+        --typography-body-xl: Regular 1.25rem/150% Riforma LL;
+        --typography-body-md: Regular 1.125rem/150% Riforma LL;
+        --typography-body-sm: Bold 1rem/150% Riforma LL;
+        --typography-link-sm: Medium 0.875rem/150% Riforma LL;
+        --typography-btn-md: Medium 1rem/150% Riforma LL;
+        --dimension-min-width: 600px;
+        --dimension-max-width: 899px;
+    }
+  }
+    
+}
+
+@layer radius--typography--sm-breakpoint {
+  
+  /* this layer automatically activates when the screen is between two specific sizes */
+  @media screen and (min-width: 320px) and (max-width: 559px) {
+    
+    :root {
+      
+        --typography-heading-xxl: Bold 2.5rem/100% Riforma LL;
+        --typography-heading-xl: Bold 2.25rem/100% Riforma LL;
+        --typography-heading-lg: Bold 1.5rem/150% Riforma LL;
+        --typography-heading-md: Regular 1.25rem/150% Riforma LL;
+        --typography-heading-sm: Medium 1.125rem/150% Riforma LL;
+        --typography-heading-xs: Light 0.875rem/150% Riforma LL;
+        --typography-body-xl: Regular 1.25rem/150% Riforma LL;
+        --typography-body-md: Regular 1.125rem/150% Riforma LL;
+        --typography-body-sm: Bold 1rem/150% Riforma LL;
+        --typography-link-sm: Medium 0.875rem/150% Riforma LL;
+        --typography-btn-lg: Medium 1.5rem/150% Riforma LL;
+        --typography-btn-md: Medium 1.125rem/150% Riforma LL;
+        --typography-btn-sm: Medium 1rem/150% Riforma LL;
+        --dimension-min-width: 320px;
+        --dimension-max-width: 559px;
+    }
+  }
+    
+}
